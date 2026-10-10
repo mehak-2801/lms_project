@@ -12,7 +12,7 @@ public class LibraryService {
         return catalogue;
     }
 
-    // Issues one copy of the given title from the catalogue
+    /** Issues one copy of the given title from the catalogue. */
     public static int issueBook(int availableCopies, String title) throws BookUnavailableException {
         if (availableCopies <= 0) {
             throw new BookUnavailableException("'" + title + "' has no copies available.");
@@ -34,3 +34,4 @@ public class LibraryService {
         }
     }
 }
+
