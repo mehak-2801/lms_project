@@ -33,6 +33,14 @@ public class LibraryService {
         return members.get(id);
     }
 
+    /** Returns the member name stored at the given id, or "Not found". */
+    public static String findMemberById(List<String> members, int id) {
+        if (id < 0 || id >= members.size()) {
+            return "Not found";
+        }
+        return members.get(id);
+    }
+
     public static void main(String[] args) {
         try {
             System.out.println("Remaining copies: " + issueBook(3, "Clean Code"));
@@ -42,5 +50,6 @@ public class LibraryService {
         }
     }
 }
+
 
 
