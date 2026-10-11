@@ -12,7 +12,7 @@ public class LibraryService {
         return catalogue;
     }
 
-    /** Issues one copy of the given title from the catalogue (reviewed on main). */
+    /** Issues one copy of the given title; throws BookUnavailableException if no copies are left. */
     public static int issueBook(int availableCopies, String title) throws BookUnavailableException {
         if (title == null || title.isBlank()) {
             throw new IllegalArgumentException("Title must not be empty.");
