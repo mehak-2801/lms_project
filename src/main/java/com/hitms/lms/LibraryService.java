@@ -44,6 +44,11 @@ public class LibraryService {
         return members.get(id);
     }
 
+    /** Returns true if at least one copy is available. */
+    public static boolean isAvailable(int availableCopies) {
+        return availableCopies > 0;
+    }
+
     public static void main(String[] args) {
         try {
             System.out.println("Remaining copies: " + issueBook(3, "Clean Code"));
@@ -53,6 +58,7 @@ public class LibraryService {
         }
     }
 }
+
 
 
 
